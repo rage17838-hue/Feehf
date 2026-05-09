@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>wifi.siege</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="topbar">
+  wifi.lol
+</div>
+
+<div class="card">
+  <h1>
+    wifi.siege <span id="badge"></span>
+  </h1>
+
+  <p id="bio">Loading bio...</p>
+
+  <audio controls autoplay loop>
+    <source src="music.mp3" type="audio/mpeg">
+  </audio>
+
+  <br><br>
+
+  <button onclick="openLogin()">Owner Login</button>
+</div>
+
+<!-- LOGIN MODAL -->
+<div id="loginBox" class="login">
+  <h2>Owner Login</h2>
+  <input id="user" placeholder="Username"><br>
+  <input id="pass" type="password" placeholder="Password"><br><br>
+  <button onclick="login()">Login</button>
+  <button onclick="closeLogin()">Close</button>
+</div>
+
+<!-- OWNER PANEL -->
+<div id="panel" class="panel">
+  <h2>Owner Panel</h2>
+
+  <input id="newBio" placeholder="Change bio"><br><br>
+  <button onclick="saveBio()">Save Bio</button>
+
+  <br><br>
+
+  <p>Upload new music:</p>
+  <input type="file" id="musicUpload" accept="audio/*"><br>
+  <button onclick="changeMusic()">Set Music</button>
+
+  <br><br>
+  <button onclick="logout()">Logout</button>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
